@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Music Box (demo)</title>
+    <meta name="description" content="A demo for demonstrating basic Web Audio API functionality">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <section class="section">
+      <h1>Music Box (demo)</h1>
+      <p>The following demonstrates some of the basic functionality of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#example">Web Audio API</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/start">OscillatorNode</a> interface. By pressing "play", the user can generate a basic sound pattern (&#119046;	&#9834;	&#9834;	&#119134; &#119040; &#9834; &#119134;	&#9834; &#119047;). Controls allow the user to adjust the pitch (immediately) and speed (of the subsequent invocation) of the pattern.</p>
+
+      <div class="music-box">
+
+        <div class="music-box__visualizer-pitch" aria-hidden="true" data-visualization="pitch">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="music-box__visualizer-beat" aria-hidden="true" data-visualization="beats">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <label class="music-box__control">
+          <p class="music-box__control-title">Speed</p>
+          <input type="range" min="100" max="7000" value="3275" step="1" data-action="speed">
+        </label>
+
+        <label class="music-box__control">
+          <p class="music-box__control-title">Pitch</p>
+          <input type="range" min="500" max="6500" value="3250" step="1" data-action="volume">
+        </label>
+
+        <footer class="music-box__footer">
+          <button class="music-box__play-button" data-action="play">
+            Play &#9658;
+          </button>
+        </footer>
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
